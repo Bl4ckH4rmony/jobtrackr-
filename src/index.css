@@ -1,13 +1,289 @@
+/* General Styles */
 body {
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #0a0a0a; /* Dark background */
+  color: #e5e7eb; /* Light text */
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(17, 17, 17, 0.9); /* Semi-transparent black */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Blur effect */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo and App Name Styles */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .logo img {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px; /* Space between logo and app name */
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+.navbar .logo .app-name {
+  font-size: 26px !important;
+  
+  color: white;
+}
+
+/* Navigation Links Styles */
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #3b82f6; /* Blue accent */
+}
+/* Landing Page Styles */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+
+.home p {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+.home .cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.home .cta-buttons a {
+  background-color: rgb(43, 1, 85); /* Semi-transparent blue */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home .cta-buttons a:hover {
+  background-color: rgb(71, 60, 168); /* Solid blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Job Form Styles */
+.job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent black */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.job-form input,
+.job-form select,
+.job-form button {
+  padding: 10px;
+  border: 1px solid #374151; /* Dark gray border */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgba(31, 41, 55, 0.8); /* Semi-transparent dark gray */
+  color: #e5e7eb; /* Light text */
+}
+
+.job-form input:focus,
+.job-form select:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue accent */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.job-form button {
+  background-color: rgb(43, 1, 85); /* Blue accent */
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.job-form button:hover {
+  background-color: rgb(71, 60, 168); /* Darker blue on hover */
+}
+
+/* Job List Styles */
+.job-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Job Card Styles */
+.job-card {
+  background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent black */
+  padding: 20px;
+  border: 1px solid #374151; /* Dark gray border */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Blur effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #e5e7eb; /* Light text */
+}
+
+.job-card p {
+  margin: 5px 0;
+  color: #9ca3af; /* Gray text */
+}
+
+.job-card button {
+  background-color: #dc2626; /* Red accent */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.job-card button:hover {
+  background-color: #b91c1c; /* Darker red on hover */
+}
+
+/* Dashboard Styles */
+.dashboard {
+  background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent black */
+  padding: 20px;
+  border: 1px solid #374151; /* Dark gray border */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.dashboard h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #e5e7eb; /* Light text */
+}
+
+.dashboard p {
+  margin: 5px 0;
+  color: #9ca3af; /* Gray text */
+}
+
+/* Search Filter Styles */
+.search-filter {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #374151; /* Dark gray border */
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: rgba(31, 41, 55, 0.8); /* Semi-transparent dark gray */
+  color: #e5e7eb; /* Light text */
+}
+
+.search-filter:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue accent */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    margin-top: 10px;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+
+  .home .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-form {
+    padding: 15px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
 }
