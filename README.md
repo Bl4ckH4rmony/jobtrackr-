@@ -14,9 +14,3 @@ JobTrackr is a web application designed to help job seekers track and manage the
 - **Frontend:** React, Tailwind CSS, React Router
 - **Deployment:** Vercel
 - **Data Persistence:** Local Storage
-
-## How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/jobtrackr.git
