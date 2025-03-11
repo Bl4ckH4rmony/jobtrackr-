@@ -23,6 +23,6 @@ JobTrackr is a web application designed to help job seekers track and manage the
 
 ## Technologies Used
 
-- **Frontend:** React, CSS, React Router
+- **Frontend:** React, CSS, React Router, UUID
 - **Deployment:** Vercel
 - **Data Persistence:** Local Storage
