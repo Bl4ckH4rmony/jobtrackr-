@@ -9,8 +9,20 @@ JobTrackr is a web application designed to help job seekers track and manage the
 - **Statistics Dashboard:** Visualize job application progress with charts and metrics.
 - **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.
 
+## Changelog
+
+### Features Added
+
+- **Editable Job Applications:** Users can now edit all fields of existing job applications inline within the "View Jobs" page.
+- **Hidden Navigation on Home Page:** The navigation links are now hidden on the home page ("/").
+
+### Bug Fixes
+
+- **Fixed: `TypeError: updateJob is not a function` error:** Resolved the error that occurred when saving edits.
+- **Fixed: Incorrect Application Update:** Resolved the issue where editing one job application would update all applications due to missing unique IDs for newly added jobs.
+
 ## Technologies Used
 
-- **Frontend:** React, Tailwind CSS, React Router
+- **Frontend:** React, CSS, React Router
 - **Deployment:** Vercel
 - **Data Persistence:** Local Storage

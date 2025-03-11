@@ -3,12 +3,12 @@ import JobForm from '../components/JobForm';
 import JobList from '../components/JobList';
 import '../index.css';
 
-const AddJob = ({ addJob, jobs, deleteJob }) => {
+const AddJob = ({ addJob, jobs, deleteJob, updateJob }) => {
   return (
-    <div className="add-job">
-      <h1 style={{ textAlign: 'center' }}>Add Job Application</h1>
+    <div className="add-job text-center">
+      <h1>Add Job Application</h1>
       <JobForm addJob={addJob} />
-      <JobList jobs={jobs} deleteJob={deleteJob} />
+      <JobList jobs={jobs} deleteJob={deleteJob} updateJob={updateJob} />
     </div>
   );
 };

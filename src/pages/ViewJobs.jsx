@@ -3,7 +3,7 @@ import JobList from '../components/JobList';
 import SearchFilter from '../components/SearchFilter';
 import '../index.css';
 
-const ViewJobs = ({ jobs, deleteJob }) => {
+const ViewJobs = ({ jobs, deleteJob, updateJob }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filterJobs = (searchTerm) => {
@@ -11,10 +11,10 @@ const ViewJobs = ({ jobs, deleteJob }) => {
   };
 
   return (
-    <div className="view-jobs">
+    <div className="view-jobs text-center">
       <h1>View Job Applications</h1>
       <SearchFilter filterJobs={filterJobs} />
-      <JobList jobs={jobs} deleteJob={deleteJob} />
+      <JobList jobs={jobs} deleteJob={deleteJob} updateJob={updateJob} />
     </div>
   );
 };

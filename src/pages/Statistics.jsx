@@ -4,7 +4,7 @@ import '../index.css';
 
 const Statistics = ({ jobs }) => {
   return (
-    <div className="statistics">
+    <div className="statistics text-center">
       <h1>Application Statistics</h1>
       <Dashboard jobs={jobs} />
     </div>
