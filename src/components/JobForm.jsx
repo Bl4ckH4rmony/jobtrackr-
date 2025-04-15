@@ -46,7 +46,7 @@ const JobForm = ({ addJob }) => {
         <option value="Offer">Offer</option>
         <option value="Rejected">Rejected</option>
       </select>
-      <button type="submit">Add Application</button>
+      <button type="submit" className="add-application-btn">Add Application</button>
     </form>
   );
 };
